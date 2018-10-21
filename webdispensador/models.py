@@ -18,4 +18,9 @@ class Choice(models.Model):
     def __str__(self):
         return self.choice_text
 
-    
+class User(models.Model):
+    name= models.CharField(max_length=50)
+    passwd=models.CharField(max_length=50)
+    ip_addr=models.CharField(max_length=20)
+    def __str__(self):
+        return self.ip_addr 
