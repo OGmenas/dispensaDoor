@@ -134,7 +134,7 @@ span.psw {
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" method="post">{% csrf_token %}
+  <form class="modal-content animate" action= "home" method="post">{% csrf_token %}
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       
@@ -155,13 +155,13 @@ span.psw {
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <span class="psw"> <a href="#">Forgot password?</a></span>
     </div>
   </form>
 </div>
 <div id="id02" class="modal">
   
-  <form class="modal-content animate" method="post">
+  <form class="modal-content animate" action= "home" method="post">    {% csrf_token %}
     <div class="imgcontainer">
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
       
@@ -175,15 +175,15 @@ span.psw {
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
 
-      <label for="psw"><b>Repeat your Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw" required>
+     <!--  <label for="re_psw"><b>Repeat your Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="re_psw" required> -->
      
       <label for="email"><b>email</b></label>
       <input type="email" placeholder="Enter email" name="email" required>
-
-      <label for="email"><b>confirm your email</b></label>
-      <input type="email" placeholder="confirm your email" name="email" required>
-
+      <!--
+      <label for="re_email"><b>confirm your email</b></label>
+      <input type="email" placeholder="confirm your email" name="re_email" required> 
+      -->
       <button type="submit">Sign Up</button>
 
     </div>
