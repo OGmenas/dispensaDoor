@@ -19,9 +19,13 @@ class Choice(models.Model):
         return self.choice_text
 
 class User(models.Model):
-    name= models.CharField(max_length=50)
-    passwd=models.CharField(max_length=50)
-    ip_addr=models.CharField(max_length=20)
+    name = models.CharField(max_length=50)
+    passwd = models.CharField(max_length=50)
+    ip_addr = models.CharField(max_length=20)
+
     def __str__(self):
-        return self.ip_addr 
-        
+        return self.ip_addr
+
+class Times(models.Model):
+    id_usr =models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.CharField(max_length=100)
