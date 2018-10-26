@@ -25,4 +25,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('', login_required(TemplateView.as_view(template_name='home.html')), name='home'),
     path('signup/', views.SignUp.as_view(), name='signup'),
+    path('webdispensador/',include('webdispensador.urls')),
 ]

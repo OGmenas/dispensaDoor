@@ -6,6 +6,24 @@
 {% block content %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
+  <h1>Horarios del dispensador:</h1>
+  <b>
+  <form>
+    <select class="form-control" placeholder="Seleccione Raspberry">
+      <option>Raspberry 1</option>
+      <option>Raspberry 2</option>
+    </select>
+    <select class="form-control" placeholder="Seleccione un programa de dispensado">
+      <option>Programa 1</option>
+      <option>Programa 2</option>
+      <option>Programa 3</option>
+    </select>
+    <select class="form-control" placeholder="Cantidad Dispensada">
+      <option>100gr</option>
+      <option>150gr</option>
+      <option>200gr</option>
+    </select>
+</form>
 {% else %}
   <p>You are not logged in</p>
   
